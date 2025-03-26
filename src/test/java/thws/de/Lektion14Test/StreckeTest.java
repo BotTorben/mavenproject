@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class StreckeTest {
     @Test
-    void testKonstruktorRichtigeReihenfolge() {
+    public void testKonstruktorRichtigeReihenfolge() {
         Strecke strecke1 = new Strecke(5, 3);
         assertEquals(3, strecke1.getA());
         assertEquals(5, strecke1.getB());
@@ -18,7 +18,7 @@ public class StreckeTest {
     }
     
     @Test
-    void testUeberscheidung() {
+    public void testUeberscheidung() {
         Strecke s1 = new Strecke(2, 6);
         Strecke s2 = new Strecke(2, 6);
         assertTrue(s1.ueberpruefeUeberschneidung(s1, s2));
@@ -33,7 +33,7 @@ public class StreckeTest {
     }
     
     @Test
-    void testToString() {
+    public void testToString() {
         Strecke strecke1 = new Strecke(3, 5);
         assertEquals("3--5", strecke1.toString());
         
