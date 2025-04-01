@@ -1,6 +1,6 @@
 package thws.de.Lektion15Test;
 
-import thws.de.Lektion15.*;
+import thws.de.Lektion15.Uebung1.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

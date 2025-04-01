@@ -1,4 +1,4 @@
-package thws.de.Lektion15;
+package thws.de.Lektion15.Uebung1;
 
 public class Abteilung {
     
