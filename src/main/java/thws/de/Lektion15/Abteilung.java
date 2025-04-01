@@ -9,4 +9,8 @@ public class Abteilung {
         this.angestellt = angestellt;
         this.abteilungsleit = abteilungsleit;
     }
+
+    public Abteilungsleiter getAbteilungsleit() {
+        return abteilungsleit;
+    }
 }

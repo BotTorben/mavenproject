@@ -24,4 +24,9 @@ public class Abteilung_Abteilungsleiter_Angestellter {
         ab.befoerdern(neu);
         assertTrue(neu.getGrundgehalt()*1.1 == neu.getGehalt());
     }
+
+    @Test
+    public void abteilungTest(){
+        assertNotNull(abt.getAbteilungsleit());
+    }
 }
