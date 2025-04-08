@@ -10,7 +10,25 @@ public class LaeuferImpl extends AbstractFigur implements Laeufer
   public Brett gibErlaubteFelder()
   {
     Brett brett = new Brett();
-    //TODO: Erg�nzen Sie den Algorithmus zur Bestimmung der Felder
+    // Diagonal: 
+    for (int i = 1; x + i <= 8 && y + i <= 8; i++) {
+      brett.markiereFeld(x + i, y + i);
+    }
+  
+    // Diagonal: rechts unten
+    for (int i = 1; x + i <= 8 && y - i >= 1; i++) {
+      brett.markiereFeld(x + i, y - i);
+    }
+  
+    // Diagonal: links oben
+    for (int i = 1; x - i >= 1 && y + i <= 8; i++) {
+      brett.markiereFeld(x - i, y + i);
+    }
+  
+    // Diagonal: links unten
+    for (int i = 1; x - i >= 1 && y - i >= 1; i++) {
+      brett.markiereFeld(x - i, y - i);
+    }
     return brett;
   }
   
@@ -22,8 +40,8 @@ public class LaeuferImpl extends AbstractFigur implements Laeufer
     {
       for (int i = 1; i <= 8; i++)
       {
-        if (brett.gibFeld(i, j)) System.out.print("x");
-        else System.out.print("o");
+        if (brett.gibFeld(i, j)) System.out.print("x ");
+        else System.out.print("o ");
       }
       System.out.println();
     }
