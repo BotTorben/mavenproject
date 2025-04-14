@@ -1,12 +1,12 @@
 package thws.de.Lektion15.Uebung3;
 
-public abstract class QuizFragen {
+public abstract class QuizFrage {
 
-    QuizFragen next;
+    QuizFrage next;
     
     String fragentext;
 
-    public QuizFragen(String fragentext){
+    public QuizFrage(String fragentext){
         this.fragentext = fragentext;
     }
 

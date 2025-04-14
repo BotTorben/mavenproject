@@ -1,6 +1,6 @@
 package thws.de.Lektion15.Uebung3;
 
-public class Multiplechoicefrage extends QuizFragen {
+public class Multiplechoicefrage extends QuizFrage {
     
     String[] antworten;
 
@@ -14,7 +14,7 @@ public class Multiplechoicefrage extends QuizFragen {
         String out = fragentext + "\n";
         char a = 'A';
         for (int i = 0; i < antworten.length; i++){
-            out += a + ": " + antworten[i].toString() + "\n";
+            out += a + ": " + antworten[i] + "\n";
             a++;
         }
         return out;

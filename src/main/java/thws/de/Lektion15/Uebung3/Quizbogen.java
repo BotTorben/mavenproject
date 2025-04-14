@@ -5,9 +5,9 @@ public class Quizbogen {
     
     
     public static void main(String[] args){
-        QuizFragen q1 = new Textfrage("Was ist die Hauptstadt von Deutschland ?");
+        QuizFrage q1 = new Textfrage("Was ist die Hauptstadt von Deutschland ?");
         String[] antworten1 = {"Bayern", "Hessen", "Frankfurt", "Berlin"};
-        QuizFragen q2 = new Multiplechoicefrage("Was ist das beste Budesland Deutschlands ?", antworten1);
+        QuizFrage q2 = new Multiplechoicefrage("Was ist das beste Budesland Deutschlands ?", antworten1);
 
         Quiz quiz = new Quiz(q1);
         quiz.fuegeFrageHinzu(q2);
