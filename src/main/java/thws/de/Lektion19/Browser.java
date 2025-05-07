@@ -21,14 +21,13 @@ public class Browser {
     }
 
     public static void main(String[] args) {
-        System.out.println("Optional-based back()");
+        System.out.println("Optional back");
         Browser browser = new Browser();
 
-        browser.back()
-               .ifPresent(url -> {
-                   String site = browser.retrieveSite(url);
-                   System.out.println("Geladene Seite: " + site);
-               });
+        browser.back().ifPresent(url -> {
+            String site = browser.retrieveSite(url);
+             System.out.println("Geladene Seite: " + site);
+        });
     }
 }
 
