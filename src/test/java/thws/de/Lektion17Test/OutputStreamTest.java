@@ -45,7 +45,7 @@ public class OutputStreamTest {
         try (FileOutputStream out = new FileOutputStream(Files.createTempFile("test", ".tmp").toFile())) {
             byte[] data = {1, 2, 3};
             assertThrows(IndexOutOfBoundsException.class, () -> {
-                out.write(data, 4, 1); // off > data.length
+                out.write(data, 4, 1); 
             });
         }
     }
@@ -55,7 +55,7 @@ public class OutputStreamTest {
         try (FileOutputStream out = new FileOutputStream(Files.createTempFile("test", ".tmp").toFile())) {
             byte[] data = {1, 2, 3};
             assertThrows(IndexOutOfBoundsException.class, () -> {
-                out.write(data, 1, 3); // 1+3 > 3
+                out.write(data, 1, 3); 
             });
         }
     }
@@ -66,7 +66,7 @@ public class OutputStreamTest {
         try (FileOutputStream out = new FileOutputStream(path.toFile())) {
             byte[] data = {10, 20, 30, 40, 50};
             assertDoesNotThrow(() -> {
-                out.write(data, 1, 3); // sollte klappen
+                out.write(data, 1, 3); 
             });
         }
     }
