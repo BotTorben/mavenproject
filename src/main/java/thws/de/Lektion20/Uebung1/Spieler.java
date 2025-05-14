@@ -3,8 +3,8 @@ package thws.de.Lektion20.Uebung1;
 import java.util.*;
 
 public class Spieler {
-    private final String name;
-    private final Set<Karte> hand = new HashSet<>();
+    private String name;
+    private Set<Karte> hand = new HashSet<>();
 
     public Spieler(String name, int anzahlKarten) {
         this.name = name;

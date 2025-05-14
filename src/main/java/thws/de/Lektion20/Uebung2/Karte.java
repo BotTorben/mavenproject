@@ -26,18 +26,15 @@ public class Karte implements Comparable<Karte> {
 
     @Override
     public int compareTo(Karte other) {
-        // 1. Buben zuerst, in Buben-Reihenfolge
         if (this.wert == Wert.BUBE && other.wert != Wert.BUBE) return -1;
         if (this.wert != Wert.BUBE && other.wert == Wert.BUBE) return 1;
         if (this.wert == Wert.BUBE && other.wert == Wert.BUBE) {
             return Integer.compare(this.farbe.ordinal(), other.farbe.ordinal());
         }
 
-        // 2. Farben vergleichen (KREUZ < PIK < HERZ < KARO)
         int farbenVergleich = Integer.compare(this.farbe.ordinal(), other.farbe.ordinal());
         if (farbenVergleich != 0) return farbenVergleich;
 
-        // 3. Werte innerhalb der Farbe vergleichen (nach Skat-Reihenfolge)
         int thisWertIndex = skatWertIndex(this.wert);
         int otherWertIndex = skatWertIndex(other.wert);
         return Integer.compare(thisWertIndex, otherWertIndex);
@@ -52,7 +49,7 @@ public class Karte implements Comparable<Karte> {
             case NEUN -> 4;
             case ACHT -> 5;
             case SIEBEN -> 6;
-            default -> 99; // Sollte nie passieren
+            default -> 99; 
         };
     }
 
